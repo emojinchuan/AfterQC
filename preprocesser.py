@@ -495,7 +495,7 @@ class seqFilter:
                 lowQual2 = 0
                 if r2!=None:
                     lowQual2 = lowQualityNum(r2, self.options.qualified_quality_phred)
-                if lowQual1 > self.options.unqualified_base_limit or lowQual1 > self.options.unqualified_base_limit:
+                if lowQual1 > self.options.unqualified_base_limit or lowQual2 > self.options.unqualified_base_limit:
                     self.writeReads(r1, r2, i1, i2, bad_read1_file, bad_read2_file, bad_index1_file, bad_index2_file, "BADLQC")
                     BADLQC += 1
                     continue
